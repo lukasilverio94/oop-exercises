@@ -25,14 +25,15 @@ const describePerson = (callback) => {
   return callback.call(person1);
 };
 //Introduction to console:
-const introduction = describePerson(person1.introduce);
-console.log(introduction);
+// const introduction = describePerson(person1.introduce);
+// console.log(introduction);
 
 // Exercise 3 - Promises
 // Write a function called `wait` that takes a number as an argument (representing milliseconds) and returns a Promise. The Promise should resolve after the given number of milliseconds, using `setTimeout`. The resolved value can be anything you choose.
 const wait = (milliseconds) => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {//Promise resolved, return this:
+    setTimeout(() => {
+      //Promise resolved, return this:
       resolve(`Promise resolved after waiting for ${milliseconds} ms.`);
     }, milliseconds);
   });
@@ -40,9 +41,18 @@ const wait = (milliseconds) => {
 
 //Using promise
 wait(3000) //Call function and pass milliseconds as param.
-.then((result) => {
+  .then((result) => {
     console.log(result); //If resolve, return this result
-})
-.catch((error) => {
-    console.log(error);//otherwise, throw error.
-})
+  })
+  .catch((error) => {
+    console.log(error); //otherwise, throw error.
+  });
+
+//TASK 4 Putting it all together
+console.log(person1.introduce());
+
+describePerson(
+  function () {
+    console.log(this.introduce());
+  }.bind(person1)
+);
