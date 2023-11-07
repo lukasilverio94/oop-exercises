@@ -24,9 +24,6 @@ let person1 = new Person("Lucas", 29);
 const describePerson = (callback) => {
   return callback.call(person1);
 };
-//Introduction to console:
-// const introduction = describePerson(person1.introduce);
-// console.log(introduction);
 
 // Exercise 3 - Promises
 // Write a function called `wait` that takes a number as an argument (representing milliseconds) and returns a Promise. The Promise should resolve after the given number of milliseconds, using `setTimeout`. The resolved value can be anything you choose.
@@ -49,10 +46,6 @@ wait(3000) //Call function and pass milliseconds as param.
   });
 
 //TASK 4 Putting it all together
-console.log(person1.introduce());
-
-describePerson(
-  function () {
-    console.log(this.introduce());
-  }.bind(person1)
-);
+//Introduction to console:
+const introduction = describePerson(person1.introduce);
+console.log(introduction);
