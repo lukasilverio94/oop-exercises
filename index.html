@@ -3,12 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <!-- js -->
     <script src="script.js" defer></script>
     <title>OOP Exercises</title>
   </head>
   <body>
-    <h1>Exercises Matrix Master #14</h1>
-    <h2>OOP Exercises</h2>
+    <div
+      class="container d-flex justify-content-center align-items-center flex-column"
+    >
+      <h1 class="text-center my-2">Exercises OOP</h1>
+      <!-- Show person1 -->
+      <h2 class="text-center">Show Person using Class</h2>
+      <button id="btn-person" class="btn btn-primary mb-3">Click me!</button>
+      <div id="show-person" class="text-center fw-bold mb-3"></div>
+
+      <!-- Show promises -->
+      <h2 class="border-top border-1 w-100 text-center py-2">Using promises</h2>
+      <button id="btn-promise" class="btn btn-success">Get your promise</button>
+      <div id="show-promise" class="text-center fw-semibold mb-3 mt-2"></div>
+    </div>
   </body>
 </html>
