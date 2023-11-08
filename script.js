@@ -51,6 +51,6 @@ btnPromise.addEventListener("click", () => {
       showPromise.innerText = result; //If resolve, return this result
     })
     .catch((error) => {
-      showPromise.innerText = error; //otherwise, throw error.
+      showPromise.innerText = "Error"; //otherwise, throw error.
     });
 });
